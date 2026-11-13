@@ -1,0 +1,52 @@
+[
+  {
+    "id": "01-alpine-lake",
+    "theme": "Пейзаж · фотография",
+    "prompt": "Photorealistic alpine lake at blue hour, viewed from water level. A single craggy mountain and its clear reflection fill the lower half, with dark firs on the lower left shoreline and a few sharp wet stones in the foreground. Keep the top third an uninterrupted muted indigo sky with a smooth tonal gradient. Restrained slate blue, charcoal and cool teal, with a hint of pale gold at the horizon. Fine natural detail in the rock and foreground, quiet atmosphere."
+  },
+  {
+    "id": "02-rainy-city",
+    "theme": "Ночной город · кинематографичная фотография",
+    "prompt": "Cinematic photograph down a narrow rain-soaked city street at night. Reflections in puddles pull the eye toward a small warm pool of light below center. Tower walls and a few soft violet and teal lights frame the street at the lower left and right edges. A broad matte navy opening between the buildings keeps the top center dark and quiet. Realistic wet asphalt, window grids and straight architectural lines. Keep storefronts unmarked and the street empty."
+  },
+  {
+    "id": "03-watercolor-coast",
+    "theme": "Побережье · акварель",
+    "prompt": "Fine-art watercolor of a rugged coast on cold-pressed paper. A headland of soft ink-blue cliffs enters from the lower right and slopes toward pale turquoise water at the bottom. Transparent washes, visible pigment granulation and a few deliberate dry-brush marks define the rocks. Leave the top third an even, low-contrast cool gray-blue wash. Let the paper texture show subtly in the open sky, and keep detail concentrated around the shoreline."
+  },
+  {
+    "id": "04-obsidian-ribbon",
+    "theme": "Абстракция · 3D",
+    "prompt": "Minimal abstract studio render of one broad folded obsidian ribbon sweeping diagonally through the lower half. Thin copper highlights trace a few edges, and a soft turquoise reflection reveals the curvature of the polished dark material. Use one continuous sculptural form with clean contours. Preserve a spacious, low-contrast charcoal-to-indigo gradient across the top third, with no specular highlights behind the top-center area."
+  },
+  {
+    "id": "05-desert-dunes",
+    "theme": "Пейзаж · аэрофотография",
+    "prompt": "Fine-art aerial photograph of desert dunes at dusk. Two broad sweeping ridges cross the bottom half in layered waves, with fine ripples sharply resolved along the lower right. Warm terracotta and dusty rose blend into dark plum shadows. The upper third is a single large dune face in even plum shadow, with uninterrupted sand and no visible horizon or ridge line. Quiet, graphic composition with a clear sense of depth."
+  },
+  {
+    "id": "06-botanical-study",
+    "theme": "Ботаника · макрофотография",
+    "prompt": "Macro botanical photograph of a single curled fern frond, rising from the lower-left corner into the middle of the image. Crisp leaf veins and a few tiny dew beads define the main subject. The top third falls into an even, softly defocused forest-green shadow. Use muted jade, dark pine green and small silver highlights, with natural depth of field and realistic leaf structure."
+  },
+  {
+    "id": "07-night-tram",
+    "theme": "Ночной город · гуашь",
+    "prompt": "Gouache illustration of a small orange tram turning on a quiet street at dusk, viewed slightly from above. Place the tram below center and use the curve of the rails to lead toward it. Frame the lower corners with simplified dark building silhouettes. Leave the upper third as an even smoky violet sky. Flat opaque paint, clean deliberate brush edges, restrained amber highlights and a dusk-blue palette. The tram has blank destination signs."
+  },
+  {
+    "id": "08-paper-arches",
+    "theme": "Абстракция · бумажный коллаж",
+    "prompt": "Tactile cut-paper collage of overlapping arches and broad planes, with the main cluster in the bottom half and its tallest arch entering at the left edge. Use matte burgundy, warm pink clay and a small sage accent with fine paper fibers and soft cast shadows. Keep the top third a single low-contrast dusty burgundy sheet, with no seams crossing the top center. Simple forms with clean cut edges and a clear sense of layering."
+  },
+  {
+    "id": "09-aurora-lagoon",
+    "theme": "Пейзаж · цифровая живопись",
+    "prompt": "Atmospheric digital painting of a glacial lagoon at night. Place a thin green aurora near the middle of the frame, with a short reflection among angular pieces of ice below center. Dark mountain silhouettes sit low on the horizon. Keep the upper third largely uniform deep ultramarine, with a subtle gradient and only a few dim stars away from the middle. Use restrained green and icy cyan against blue-black water. Define the foreground ice edges clearly."
+  },
+  {
+    "id": "10-jellyfish",
+    "theme": "Подводный мир · макрофотография",
+    "prompt": "Underwater macro photograph of one translucent moon jellyfish drifting just below the center. A softly lit lavender bell and thin flowing tentacles are the only detailed subject, moving toward the lower right. The top third is smooth, low-contrast deep cobalt water. Tiny suspended particles are confined to the lower part of the frame. Realistic translucent tissue, restrained highlights and crisp detail on the edge of the bell."
+  }
+]

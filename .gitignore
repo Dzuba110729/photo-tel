@@ -1,0 +1,16 @@
+/.fal-key
+/.nanogpt-key
+/.gdrive/
+/.venv/
+/venv/
+/orders-data/
+/pilot-output/
+/.impeccable/
+/STEP[3-7].md
+/.env*
+/.DS_Store
+client_secret*.json
+credentials*.json
+token*.json
+*.sqlite3*
+__pycache__/

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Настройте коллекцию обоев для экрана блокировки смартфона.">
+  <meta name="theme-color" content="#171513">
+  <title>Photo-tel · Студия обоев</title>
+  <link rel="icon" href="./assets/photo-tel-logo.png" type="image/png">
+  <link rel="stylesheet" href="./assets/studio.css">
+  <script src="./assets/studio.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#configuration">К настройкам заказа</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="./" aria-label="Photo-tel, главная">
+      <img src="./assets/photo-tel-logo.png" width="36" height="36" alt="">
+      <span>PHOTO<span class="brand-dash">-</span>TEL</span>
+    </a>
+    <nav aria-label="Разделы">
+      <a href="#configuration">Конфигуратор</a>
+      <a href="#history">Заказы</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="title">
+    <div class="shell hero-inner">
+      <div class="hero-copy">
+        <h1 id="title">Студия обоев</h1>
+        <p id="hero-description">Соберите свою коллекцию для экрана блокировки. Готовые обои появятся на Google Диске.</p>
+        <a class="hero-link" href="#configuration">Настроить заказ <span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="preview" id="preview" data-tone="light">
+        <div class="phone" aria-hidden="true">
+          <div class="phone-display">
+            <img id="light-preview" src="./assets/light-preview.webp" width="408" height="886" alt="">
+            <img id="dark-preview" src="./assets/dark-preview.webp" width="408" height="886" alt="">
+            <div class="phone-clock"><span>Четверг, 12 ноября</span><strong>9:41</strong></div>
+          </div>
+        </div>
+        <figcaption id="preview-label">Пример светлых обоев</figcaption>
+      </figure>
+    </div>
+  </section>
+  <div class="shell studio" id="configuration">
+    <form id="order-form" aria-labelledby="configuration-title">
+      <h2 id="configuration-title">Настройки заказа</h2>
+      <fieldset class="form-section tone-section">
+        <legend>Тон обоев</legend>
+        <div class="segments" id="tone-options">
+          <label><input type="radio" name="tone" value="light" checked><span><i class="tone-swatch light" aria-hidden="true"></i>Светлые</span></label>
+          <label><input type="radio" name="tone" value="dark"><span><i class="tone-swatch dark" aria-hidden="true"></i>Тёмные</span></label>
+        </div>
+        <p class="hint" id="tone-hint">Светлый кадр с местом для тёмных часов.</p>
+      </fieldset>
+      <fieldset class="form-section">
+        <legend>Темы</legend>
+        <div class="themes" id="themes" aria-busy="true"></div>
+        <label class="field-label" for="custom">Свои темы</label>
+        <div class="custom-control">
+          <textarea id="custom" rows="1" placeholder="Например, бумажные фонари" aria-describedby="custom-hint"></textarea>
+          <button class="button-secondary" id="add-custom" type="button">Добавить</button>
+        </div>
+        <p class="hint" id="custom-hint">До 160 символов на тему. Можно вставить несколько строк.</p>
+        <p class="error" id="custom-error" role="alert" hidden></p>
+      </fieldset>
+      <fieldset class="form-section allocation-section">
+        <legend>Распределение кадров</legend>
+        <div class="allocation-tools">
+          <div class="segments" id="allocation-options">
+            <label><input type="radio" name="allocation" value="auto" checked><span>Автоматически</span></label>
+            <label><input type="radio" name="allocation" value="manual"><span>Вручную</span></label>
+          </div>
+          <label class="total-field" id="auto-total" for="count">
+            Всего кадров <input id="count" type="number" min="1" max="100" step="1" inputmode="numeric" value="5" required>
+          </label>
+        </div>
+        <p class="hint" id="allocation-hint">Кадры распределятся по темам поровну или с разницей в один.</p>
+        <ul id="allocation" class="allocation" aria-label="Кадры по темам" hidden></ul>
+      </fieldset>
+    </form>
+
+    <aside class="order-column" aria-label="Заказ и история">
+      <section class="checkout" aria-labelledby="checkout-title">
+        <h2 id="checkout-title">Ваш заказ</h2>
+        <dl class="quote">
+          <div><dt>Обои</dt><dd id="quote-count">—</dd></div>
+          <div><dt>Формат</dt><dd>JPEG · 1870 × 4063</dd></div>
+          <div><dt>Тон</dt><dd id="quote-tone">Светлый</dd></div>
+        </dl>
+        <div class="price"><span id="price-label">Ориентировочная стоимость</span><output id="estimate">—</output></div>
+        <p class="hint checkout-hint" id="checkout-hint">Выберите хотя бы одну тему.</p>
+        <button id="submit" class="button-primary" type="submit" form="order-form" disabled>
+          <span>Запустить заказ</span><span aria-hidden="true">→</span>
+        </button>
+        <p class="error" id="form-error" role="alert" hidden></p>
+      </section>
+
+      <section id="history" class="history" aria-labelledby="history-title">
+        <h2 id="history-title">Заказы</h2>
+        <p class="hint" id="history-empty">Здесь появятся прогресс и ссылка на готовые обои.</p>
+        <label for="orders" id="order-select" hidden>
+          <span class="sr-only">Выберите заказ</span><select id="orders"></select>
+        </label>
+        <div id="progress" hidden>
+          <p id="status" class="status" role="status"></p>
+          <p id="theme-counts" class="hint"></p>
+          <div id="stages">
+            <div class="stage"><label for="generated">Ответы NanoGPT</label><span id="generated-count"></span><progress id="generated" max="1" value="0"></progress></div>
+            <div class="stage"><label for="jpeg_ready">Готовые JPEG</label><span id="jpeg_ready-count"></span><progress id="jpeg_ready" max="1" value="0"></progress></div>
+            <div class="stage"><label for="uploaded">Файлы на Диске с CSV</label><span id="uploaded-count"></span><progress id="uploaded" max="1" value="0"></progress></div>
+          </div>
+          <p id="order-error" class="error" role="alert" hidden></p>
+          <div id="actions" hidden>
+            <button id="resume" class="button-secondary" type="button" hidden>Возобновить</button>
+            <a id="folder" class="drive-link" target="_blank" rel="noopener" hidden>Открыть папку на Диске ↗</a>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </div>
+</main>
+</body>
+</html>
